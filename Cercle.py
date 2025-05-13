@@ -8,11 +8,12 @@
     Sorties: la circonférence du disque
              l'aire du disque
 """
+from math import pi
 
 #lecture du rayon
 rayon = float(input("Veuillez donner le rayon : "))
-circ = 3.14 * 2 * rayon #calcul de la circonférence
-aire = 3.14 * rayon ** 2 #calcul de l'aire du disque
+circ = pi * 2 * rayon #calcul de la circonférence
+aire = pi * rayon ** 2 #calcul de l'aire du disque
 #affichage des résultats
 print("Circonférence :", circ)
 print("Aire          :",aire)
