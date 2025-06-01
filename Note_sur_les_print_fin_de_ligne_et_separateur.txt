@@ -1,0 +1,17 @@
+- Chaque print se termine par un passage à la ligne suivante ;
+
+- Un espace sépare chaque valeur affichée.
+
+Il se peut que l’on ne désire pas passer à la ligne après un appel à print, ou que l’on ne veuille pas avoir une espace comme séparateur entre les valeurs.
+Il est possible de modifier ces deux comportements de la fonction print, en explicitant ce que l’interpréteur doit utiliser comme chaîne de caractères de séparation (argument nommé sep) et de fin d’affichage (argument nommé end).
+
+Par exemple :
+
+date_1 = 1515
+date_2 = 1789
+print("Bataille de Marignan", date_1, sep=' : ', end='/')
+print("Révolution française", date_2, sep=' : ', end='\n-----\n')
+affiche les deux lignes
+
+Bataille de Marignan : 1515/Révolution française : 1789
+-----
