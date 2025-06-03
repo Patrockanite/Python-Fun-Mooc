@@ -25,3 +25,5 @@ while essai <= 6:
         print("Gagné en",essai,"essai(s) !")
         essai = 10
     essai +=1
+if essai == 7 and Nb_propose != tirage:
+    print("Perdu ! Le secret était",tirage)
