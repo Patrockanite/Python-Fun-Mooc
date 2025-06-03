@@ -12,18 +12,18 @@ import random
 
 #tirage = random.randint(0,100)
 tirage = 42
-essai = 1
+Nb_essai = 1
 print("Tirage :",tirage)
-while essai <= 6:
-    print("essai",essai)
+while Nb_essai <= 6:
+    print("essai",Nb_essai)
     Nb_propose = int(input("Entrez votre nombre : "))
-    if Nb_propose > tirage and essai < 6:
+    if Nb_propose > tirage and Nb_essai < 6:
         print("Trop grand")
-    if Nb_propose < tirage & essai < 6:
+    if Nb_propose < tirage & Nb_essai < 6:
         print("Trop petit")
     if Nb_propose == tirage:
-        print("Gagné en",essai,"essai(s) !")
-        essai = 10
-    essai +=1
-if essai == 7 and Nb_propose != tirage:
+        print("Gagné en",Nb_essai,"essai(s) !")
+        Nb_essai = 10
+    Nb_essai +=1
+if Nb_essai == 7 and Nb_propose != tirage:
     print("Perdu ! Le secret était",tirage)
