@@ -10,20 +10,22 @@ Exercice UpyLaB 3.14
 """
 import random
 
-#tirage = random.randint(0,100)
-tirage = 42
-Nb_essai = 1
-print("Tirage :",tirage)
-while Nb_essai <= 6:
-    print("essai",Nb_essai)
+secret = random.randint(0, 100)
+#secret = 7  # Pour les tests
+NB_ESSAIS_MAX = 6
+essais = 0
+trouve = False
+
+while essais < NB_ESSAIS_MAX and not trouve:
     Nb_propose = int(input("Entrez votre nombre : "))
-    if Nb_propose > tirage and Nb_essai < 6:
+    essais += 1
+    if Nb_propose > secret and essais < NB_ESSAIS_MAX:
         print("Trop grand")
-    if Nb_propose < tirage & Nb_essai < 6:
+    elif Nb_propose < secret and essais < NB_ESSAIS_MAX:
         print("Trop petit")
-    if Nb_propose == tirage:
-        print("Gagné en",Nb_essai,"essai(s) !")
-        Nb_essai = 10
-    Nb_essai +=1
-if Nb_essai == 7 and Nb_propose != tirage:
-    print("Perdu ! Le secret était",tirage)
+    elif Nb_propose == secret:
+        print("Gagné en", essais, "essai(s) !")
+        trouve = True
+
+if not trouve:
+    print("Perdu ! Le secret était", secret)
